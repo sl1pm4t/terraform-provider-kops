@@ -2,6 +2,7 @@ package resources
 
 import (
 	"context"
+	"strings"
 
 	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources"
 	"github.com/eddycharly/terraform-provider-kops/pkg/config"
@@ -51,6 +52,9 @@ func ClusterUpdate(c context.Context, d *schema.ResourceData, m interface{}) dia
 func ClusterRead(_ context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	in := resourcesschema.ExpandResourceCluster(d.Get("").(map[string]interface{}))
 	if cluster, err := resources.GetCluster(in.Name, config.Clientset(m)); err != nil {
+		if strings.Contains(err.Error(), "not found") {
+			return nil
+		}
 		return diag.FromErr(err)
 	} else {
 		flattened := resourcesschema.FlattenResourceCluster(*cluster)
