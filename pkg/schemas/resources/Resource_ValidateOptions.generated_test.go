@@ -3,8 +3,8 @@ package schemas
 import (
 	"testing"
 
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources"
 	"github.com/google/go-cmp/cmp"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources"
 )
 
 func TestExpandResourceValidateOptions(t *testing.T) {

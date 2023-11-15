@@ -1,7 +1,7 @@
 package resources
 
 import (
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/utils"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/utils"
 	"k8s.io/kops/pkg/client/simple"
 )
 

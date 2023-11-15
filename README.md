@@ -1,7 +1,7 @@
 # terraform-provider-kops
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/eddycharly/terraform-provider-kops/blob/master/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/eddycharly/terraform-provider-kops)](https://goreportcard.com/report/eddycharly/terraform-provider-kops)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/sl1pm4t/terraform-provider-kops/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/sl1pm4t/terraform-provider-kops)](https://goreportcard.com/report/sl1pm4t/terraform-provider-kops)
 
 `terraform-provider-kops` brings [kOps](https://github.com/kubernetes/kops)
 into terraform in a fully managed way, enabling idempotency through direct
@@ -66,7 +66,7 @@ authentication settings, currently only AWS is supported.
 ## Docs
 
 The full documentation is available in the [docs](/docs/index.md) folder or
-on the [terraform registry](https://registry.terraform.io/providers/eddycharly/kops/latest/docs)
+on the [terraform registry](https://registry.terraform.io/providers/sl1pm4t/kops/latest/docs)
 provider page.
 
 ## Installing the provider
@@ -77,7 +77,7 @@ To install the provider, add it in the terraform `required_providers` set.
 terraform {
   required_providers {
     kops = {
-      source  = "eddycharly/kops"
+      source  = "sl1pm4t/kops"
     }
   }
 }
@@ -106,7 +106,7 @@ To use the provider you will need to register it in your terraform code:
 terraform {
   required_providers {
     kops = {
-      source   = "github/eddycharly/kops"
+      source   = "github/sl1pm4t/kops"
       versions = ["0.0.1"]
     }
   }

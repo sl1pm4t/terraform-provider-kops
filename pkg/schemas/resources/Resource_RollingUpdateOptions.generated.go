@@ -1,11 +1,11 @@
 package schemas
 
 import (
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/utils"
-	. "github.com/eddycharly/terraform-provider-kops/pkg/schemas"
-	utilsschemas "github.com/eddycharly/terraform-provider-kops/pkg/schemas/utils"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/utils"
+	. "github.com/sl1pm4t/terraform-provider-kops/pkg/schemas"
+	utilsschemas "github.com/sl1pm4t/terraform-provider-kops/pkg/schemas/utils"
 )
 
 var _ = Schema

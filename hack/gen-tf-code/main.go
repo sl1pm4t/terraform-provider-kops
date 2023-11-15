@@ -8,25 +8,25 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/config"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/datasources"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/kube"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources"
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/utils"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/config"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/datasources"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/kube"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/utils"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/kops/pkg/apis/kops"
 )
 
 var mappings = map[string]string{
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/config":      "config",
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/datasources": "datasources",
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/kube":        "kube",
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources":   "resources",
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/utils":       "utils",
-	"k8s.io/kops/pkg/apis/kops":                                         "kops",
-	"k8s.io/api/core/v1":                                                "core",
-	"k8s.io/apimachinery/pkg/apis/meta/v1":                              "meta",
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/config":      "config",
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/datasources": "datasources",
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/kube":        "kube",
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources":   "resources",
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/utils":       "utils",
+	"k8s.io/kops/pkg/apis/kops":                                      "kops",
+	"k8s.io/api/core/v1":                                             "core",
+	"k8s.io/apimachinery/pkg/apis/meta/v1":                           "meta",
 }
 
 func buildDoc(t reflect.Type, p string, funcMaps ...template.FuncMap) {
@@ -87,10 +87,10 @@ func build(scope, docs string, parser *parser, g ...generated) {
 func main() {
 	log.Println("loading packages...")
 	parser, err := initParser(
-		"github.com/eddycharly/terraform-provider-kops/pkg/api/config",
-		"github.com/eddycharly/terraform-provider-kops/pkg/api/datasources",
-		"github.com/eddycharly/terraform-provider-kops/pkg/api/kube",
-		"github.com/eddycharly/terraform-provider-kops/pkg/api/resources",
+		"github.com/sl1pm4t/terraform-provider-kops/pkg/api/config",
+		"github.com/sl1pm4t/terraform-provider-kops/pkg/api/datasources",
+		"github.com/sl1pm4t/terraform-provider-kops/pkg/api/kube",
+		"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources",
 	)
 	if err != nil {
 		panic(err)

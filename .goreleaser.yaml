@@ -22,10 +22,10 @@ builds:
     ldflags:
       - -s
       - -w
-      - -X 'github.com/eddycharly/terraform-provider-kops/pkg/version.BuildVersion={{.Version}}'
-      - -X 'github.com/eddycharly/terraform-provider-kops/pkg/version.BuildCommit={{.Commit}}'
-      - -X 'github.com/eddycharly/terraform-provider-kops/pkg/version.BuildDate={{.Date}}'
-      - -X 'github.com/eddycharly/terraform-provider-kops/pkg/version.BuiltBy=goreleaser'
+      - -X 'github.com/sl1pm4t/terraform-provider-kops/pkg/version.BuildVersion={{.Version}}'
+      - -X 'github.com/sl1pm4t/terraform-provider-kops/pkg/version.BuildCommit={{.Commit}}'
+      - -X 'github.com/sl1pm4t/terraform-provider-kops/pkg/version.BuildDate={{.Date}}'
+      - -X 'github.com/sl1pm4t/terraform-provider-kops/pkg/version.BuiltBy=goreleaser'
 archives:
   - id: terraform-provider-kops
     format: zip

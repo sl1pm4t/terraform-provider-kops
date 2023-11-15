@@ -3,11 +3,11 @@ package datasources
 import (
 	"context"
 
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/resources"
-	"github.com/eddycharly/terraform-provider-kops/pkg/config"
-	resourceschemas "github.com/eddycharly/terraform-provider-kops/pkg/schemas/resources"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/resources"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/config"
+	resourceschemas "github.com/sl1pm4t/terraform-provider-kops/pkg/schemas/resources"
 )
 
 func Cluster() *schema.Resource {

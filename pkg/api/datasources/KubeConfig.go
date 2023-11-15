@@ -3,7 +3,7 @@ package datasources
 import (
 	"time"
 
-	"github.com/eddycharly/terraform-provider-kops/pkg/api/kube"
+	"github.com/sl1pm4t/terraform-provider-kops/pkg/api/kube"
 	"k8s.io/kops/pkg/client/simple"
 )
 
