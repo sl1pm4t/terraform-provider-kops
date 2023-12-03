@@ -468,8 +468,8 @@ github.com/shopspring/decimal v1.3.1/go.mod h1:DKyhrW/HYNuLGql+MJL6WCR6knT2jwCFR
 github.com/sirupsen/logrus v1.9.0/go.mod h1:naHLuLoDiP4jHNo9R0sCBMtWGeIprob74mVsIT4qYEQ=
 github.com/sirupsen/logrus v1.9.3 h1:dueUQJ1C2q9oE3F7wvmSGAaVtTmUizReu6fjN8uqzbQ=
 github.com/sirupsen/logrus v1.9.3/go.mod h1:naHLuLoDiP4jHNo9R0sCBMtWGeIprob74mVsIT4qYEQ=
-github.com/sl1pm4t/kops v1.28.2-0.20231115012306-243a6daf9e3d h1:FEVNE0fCrusx/0wRSg/yQ1mYW88hsKX7rlykvRCwgQ0=
-github.com/sl1pm4t/kops v1.28.2-0.20231115012306-243a6daf9e3d/go.mod h1:T/61U2Q9UVwrlALt/1r4kEgD0Uc8gz35S/SB6JYSdLc=
+github.com/sl1pm4t/kops v1.28.2-0.20231203223510-0fd2f85b5d39 h1:hQLJgZX5rCcnpM3dnWSQN+2Bayv8vBlJrAL0bjMg31M=
+github.com/sl1pm4t/kops v1.28.2-0.20231203223510-0fd2f85b5d39/go.mod h1:T/61U2Q9UVwrlALt/1r4kEgD0Uc8gz35S/SB6JYSdLc=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/spf13/cast v1.3.1/go.mod h1:Qx5cxh0v+4UWYiBimWS+eyWzqEqokIECu5etghLkUJE=
 github.com/spf13/cast v1.5.1 h1:R+kOtfhWQE6TVQzY+4D7wJLBgkdVasCEFxSUBYBYIlA=
