@@ -56,8 +56,6 @@ resource "kops_cluster" "cluster" {
     calico {}
 
     topology {
-      control_plane = "private"
-      nodes         = "private"
       dns           = "Private"
       bastion {
         bastion_public_name = "bastion.${local.clusterName}"
