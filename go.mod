@@ -15,7 +15,7 @@ require (
 	k8s.io/kops v1.28.2
 )
 
-replace k8s.io/kops v1.28.1 => github.com/sl1pm4t/kops v1.28.2-0.20231203223510-0fd2f85b5d39
+replace k8s.io/kops v1.28.2 => github.com/sl1pm4t/kops v1.28.2-ditto
 
 require (
 	cloud.google.com/go/compute v1.23.0 // indirect
