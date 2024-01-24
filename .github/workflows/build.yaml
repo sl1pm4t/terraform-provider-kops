@@ -35,6 +35,10 @@ jobs:
         with:
           path: /home/runner/go/pkg/mod
           key: go-mod
-      - name: Build install and validate against examples
+      - name: Build provider and install
         run: |
+          make install
+      - name: Validate against examples
+        run: |
+          find ~/.terraform.d/plugins/
           make examples
