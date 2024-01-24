@@ -3,7 +3,11 @@ OS                        := $(shell echo `uname` | tr '[:upper:]' '[:lower:]')
 TOOLS_DIR                 := $(PWD)/.tools
 GOIMPORTS                 := $(TOOLS_DIR)/goimports
 GOIMPORTS_VERSION         := latest
-GOARCH                    ?= amd64
+GOARCH                    ?= $(shell uname -m)
+
+ifeq (${GOARCH},x86_64)
+	GOARCH := amd64
+endif
 
 .PHONY: all
 all: clean gen fmt build verify-gen vet test
@@ -65,34 +69,42 @@ install: all
 
 # EXAMPLES FOR TERRAFORM >= 0.15
 
+.PHONY: clean-examples
+clean-examples:
+	rm -r -f ./examples/basic/.terraform*
+	rm -r -f ./examples/aws-profile/.terraform*
+	rm -r -f ./examples/aws-assume-role/.terraform*
+	rm -r -f ./examples/bastion/.terraform*
+	rm -r -f ./examples/klog/.terraform*
+
 .PHONY: examples
-examples: example-basic example-aws-profile example-aws-assume-role example-bastion example-klog
+examples: clean-examples example-basic example-aws-profile example-aws-assume-role example-bastion example-klog
 
 .PHONY: example-basic
-example-basic: install
+example-basic:
 	@terraform -chdir=./examples/basic init
 	@terraform -chdir=./examples/basic validate
 	@terraform -chdir=./examples/basic plan
 
 .PHONY: example-aws-profile
-example-aws-profile: install
+example-aws-profile:
 	@terraform -chdir=./examples/aws-profile init
 	@terraform -chdir=./examples/aws-profile validate
 	@terraform -chdir=./examples/aws-profile plan
 
 .PHONY: example-aws-assume-role
-example-aws-assume-role: install
+example-aws-assume-role:
 	@terraform -chdir=./examples/aws-assume-role init
 	@terraform -chdir=./examples/aws-assume-role validate
 
 .PHONY: example-bastion
-example-bastion: install
+example-bastion:
 	@terraform -chdir=./examples/bastion init
 	@terraform -chdir=./examples/bastion validate
 	@terraform -chdir=./examples/bastion plan
 
 .PHONY: example-klog
-example-klog: install
+example-klog:
 	@terraform -chdir=./examples/klog init
 	@terraform -chdir=./examples/klog validate
 	@terraform -chdir=./examples/klog plan

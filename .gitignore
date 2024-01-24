@@ -13,6 +13,5 @@ crash.log
 terraform.log
 
 /terraform-provider-kops
-go.work
-go.work.sum
+go.work*
 .idea
