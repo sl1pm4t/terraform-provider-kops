@@ -75,6 +75,7 @@ clean-examples:
 	rm -r -f ./examples/aws-profile/.terraform*
 	rm -r -f ./examples/aws-assume-role/.terraform*
 	rm -r -f ./examples/bastion/.terraform*
+	rm -r -f ./examples/gcp/.terraform*
 	rm -r -f ./examples/klog/.terraform*
 
 .PHONY: examples
@@ -102,6 +103,12 @@ example-bastion:
 	@terraform -chdir=./examples/bastion init
 	@terraform -chdir=./examples/bastion validate
 	@terraform -chdir=./examples/bastion plan
+
+.PHONY: example-gcp
+example-gcp:
+	@terraform -chdir=./examples/gcp init
+	@terraform -chdir=./examples/gcp validate
+	@terraform -chdir=./examples/gcp plan
 
 .PHONY: example-klog
 example-klog:
