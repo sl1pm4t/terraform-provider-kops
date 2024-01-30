@@ -63,9 +63,9 @@ vet: fmt
 	@go vet ./...
 
 .PHONY: install
-install: all
-	@mkdir -p ${HOME}/.terraform.d/plugins/github/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}
-	@cp terraform-provider-kops $(HOME)/.terraform.d/plugins/github/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}/terraform-provider-kops
+install:
+	@mkdir -p ${HOME}/.terraform.d/plugins/registry.terraform.io/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}
+	@cp terraform-provider-kops $(HOME)/.terraform.d/plugins/registry.terraform.io/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}/terraform-provider-kops
 
 # EXAMPLES FOR TERRAFORM >= 0.15
 
