@@ -63,7 +63,7 @@ vet: fmt
 	@go vet ./...
 
 .PHONY: install
-install:
+install: build
 	@mkdir -p ${HOME}/.terraform.d/plugins/registry.terraform.io/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}
 	@cp terraform-provider-kops $(HOME)/.terraform.d/plugins/registry.terraform.io/sl1pm4t/kops/${PROVIDER_VERSION}/${OS}_${GOARCH}/terraform-provider-kops
 
